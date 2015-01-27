@@ -1,0 +1,1003 @@
+[
+  {
+    "zipcode":10464,
+    "location":"40.867099, -73.797609",
+    "city":"Bronx, New York",
+    "population":"4,634",
+    "income":57458.00 
+  },
+  {
+    "zipcode":10471,
+    "location":"40.898117, -73.900227",
+    "city":"Bronx, New York",
+    "population":"23,413",
+    "income":56488.00 
+  },
+  {
+    "zipcode":10465,
+    "location":"40.826285, -73.822762",
+    "city":"Bronx, New York",
+    "population":"42,500",
+    "income":45650.00 
+  },
+  {
+    "zipcode":10469,
+    "location":"40.867849, -73.845140",
+    "city":"Bronx, New York",
+    "population":"63,345",
+    "income":42102.00 
+  },
+  {
+    "zipcode":10475,
+    "location":"40.875266, -73.826037",
+    "city":"Bronx, New York",
+    "population":"38,086",
+    "income":40528.00 
+  },
+  {
+    "zipcode":10463,
+    "location":"40.880678, -73.906540",
+    "city":"Bronx, New York",
+    "population":"65,576",
+    "income":40497.00 
+  },
+  {
+    "zipcode":10461,
+    "location":"40.847409, -73.841403",
+    "city":"Bronx, New York",
+    "population":"49,808",
+    "income":40024.00 
+  },
+  {
+    "zipcode":10470,
+    "location":"40.900965, -73.863998",
+    "city":"Bronx, New York",
+    "population":"15,780",
+    "income":38464.00 
+  },
+  {
+    "zipcode":10466,
+    "location":"40.891039, -73.847226",
+    "city":"Bronx, New York",
+    "population":"68,787",
+    "income":37141.00 
+  },
+  {
+    "zipcode":10462,
+    "location":"40.842823, -73.858861",
+    "city":"Bronx, New York",
+    "population":"72,077",
+    "income":33735.00 
+  },
+  {
+    "zipcode":10467,
+    "location":"40.877420, -73.872597",
+    "city":"Bronx, New York",
+    "population":"94,342",
+    "income":29044.00 
+  },
+  {
+    "zipcode":10473,
+    "location":"40.817685, -73.858576",
+    "city":"Bronx, New York",
+    "population":"56,166",
+    "income":27733.00 
+  },
+  {
+    "zipcode":10468,
+    "location":"40.868093, -73.899730",
+    "city":"Bronx, New York",
+    "population":"78,309",
+    "income":26852.00 
+  },
+  {
+    "zipcode":10472,
+    "location":"40.829650, -73.869368",
+    "city":"Bronx, New York",
+    "population":"64,867",
+    "income":23565.00 
+  },
+  {
+    "zipcode":10458,
+    "location":"40.862831, -73.886395",
+    "city":"Bronx, New York",
+    "population":"77,840",
+    "income":22072.00 
+  },
+  {
+    "zipcode":10453,
+    "location":"40.852779, -73.912332",
+    "city":"Bronx, New York",
+    "population":"76,775",
+    "income":21109.00 
+  },
+  {
+    "zipcode":10452,
+    "location":"40.837763, -73.923314",
+    "city":"Bronx, New York",
+    "population":"72,138",
+    "income":20606.00 
+  },
+  {
+    "zipcode":10451,
+    "location":"40.822092, -73.922612",
+    "city":"Bronx, New York",
+    "population":"40,961",
+    "income":20307.00 
+  },
+  {
+    "zipcode":10460,
+    "location":"40.842724, -73.879745",
+    "city":"Bronx, New York",
+    "population":"53,707",
+    "income":19517.00 
+  },
+  {
+    "zipcode":10455,
+    "location":"40.814678, -73.908333",
+    "city":"Bronx, New York",
+    "population":"37,465",
+    "income":19389.00 
+  },
+  {
+    "zipcode":10457,
+    "location":"40.846687, -73.898374",
+    "city":"Bronx, New York",
+    "population":"69,048",
+    "income":19233.00 
+  },
+  {
+    "zipcode":10459,
+    "location":"40.825558, -73.893156",
+    "city":"Bronx, New York",
+    "population":"39,080",
+    "income":17498.00 
+  },
+  {
+    "zipcode":10456,
+    "location":"40.830877, -73.907954",
+    "city":"Bronx, New York",
+    "population":"76,656",
+    "income":16664.00 
+  },
+  {
+    "zipcode":10474,
+    "location":"40.810203, -73.884437",
+    "city":"Bronx, New York",
+    "population":"11,354",
+    "income":16339.00 
+  },
+  {
+    "zipcode":10454,
+    "location":"40.805528, -73.916632",
+    "city":"Bronx, New York",
+    "population":"34,976",
+    "income":14271.00 
+  },
+  {
+    "zipcode":11201,
+    "location":"40.693682, -73.989693",
+    "city":"Brooklyn, New York",
+    "population":"47,746",
+    "income":56293.00 
+  },
+  {
+    "zipcode":11215,
+    "location":"40.662688, -73.986740",
+    "city":"Brooklyn, New York",
+    "population":"63,001",
+    "income":53313.00 
+  },
+  {
+    "zipcode":11234,
+    "location":"40.612540, -73.894255",
+    "city":"Brooklyn, New York",
+    "population":"86,898",
+    "income":51446.00 
+  },
+  {
+    "zipcode":11217,
+    "location":"40.682306, -73.978099",
+    "city":"Brooklyn, New York",
+    "population":"35,353",
+    "income":49567.00 
+  },
+  {
+    "zipcode":11231,
+    "location":"40.677916, -74.005154",
+    "city":"Brooklyn, New York",
+    "population":"32,974",
+    "income":45154.00 
+  },
+  {
+    "zipcode":11228,
+    "location":"40.616863, -74.013196",
+    "city":"Brooklyn, New York",
+    "population":"41,172",
+    "income":44932.00 
+  },
+  {
+    "zipcode":11209,
+    "location":"40.622352, -74.030431",
+    "city":"Brooklyn, New York",
+    "population":"69,840",
+    "income":44518.00 
+  },
+  {
+    "zipcode":11210,
+    "location":"40.628049, -73.946278",
+    "city":"Brooklyn, New York",
+    "population":"62,308",
+    "income":42967.00 
+  },
+  {
+    "zipcode":11236,
+    "location":"40.639761, -73.900640",
+    "city":"Brooklyn, New York",
+    "population":"96,301",
+    "income":42370.00 
+  },
+  {
+    "zipcode":11238,
+    "location":"40.678424, -73.963874",
+    "city":"Brooklyn, New York",
+    "population":"48,965",
+    "income":39917.00 
+  },
+  {
+    "zipcode":11229,
+    "location":"40.601293, -73.944493",
+    "city":"Brooklyn, New York",
+    "population":"80,554",
+    "income":37812.00 
+  },
+  {
+    "zipcode":11203,
+    "location":"40.649411, -73.934397",
+    "city":"Brooklyn, New York",
+    "population":"84,498",
+    "income":37341.00 
+  },
+  {
+    "zipcode":11218,
+    "location":"40.643783, -73.975954",
+    "city":"Brooklyn, New York",
+    "population":"74,611",
+    "income":36432.00 
+  },
+  {
+    "zipcode":11214,
+    "location":"40.598668, -73.996212",
+    "city":"Brooklyn, New York",
+    "population":"83,546",
+    "income":33765.00 
+  },
+  {
+    "zipcode":11222,
+    "location":"40.728367, -73.945427",
+    "city":"Brooklyn, New York",
+    "population":"39,360",
+    "income":33578.00 
+  },
+  {
+    "zipcode":11230,
+    "location":"40.622104, -73.965118",
+    "city":"Brooklyn, New York",
+    "population":"88,933",
+    "income":32327.00 
+  },
+  {
+    "zipcode":11223,
+    "location":"40.597427, -73.973039",
+    "city":"Brooklyn, New York",
+    "population":"77,691",
+    "income":32104.00 
+  },
+  {
+    "zipcode":11204,
+    "location":"40.618675, -73.984893",
+    "city":"Brooklyn, New York",
+    "population":"74,880",
+    "income":31798.00 
+  },
+  {
+    "zipcode":11235,
+    "location":"40.583552, -73.947900",
+    "city":"Brooklyn, New York",
+    "population":"77,451",
+    "income":31013.00 
+  },
+  {
+    "zipcode":11225,
+    "location":"40.662236, -73.958951",
+    "city":"Brooklyn, New York",
+    "population":"63,774",
+    "income":30192.00 
+  },
+  {
+    "zipcode":11220,
+    "location":"40.641307, -74.016251",
+    "city":"Brooklyn, New York",
+    "population":"92,718",
+    "income":30152.00 
+  },
+  {
+    "zipcode":11226,
+    "location":"40.646430, -73.956866",
+    "city":"Brooklyn, New York",
+    "population":"106,154",
+    "income":29498.00 
+  },
+  {
+    "zipcode":11232,
+    "location":"40.655827, -74.006829",
+    "city":"Brooklyn, New York",
+    "population":"27,723",
+    "income":28395.00 
+  },
+  {
+    "zipcode":11205,
+    "location":"40.696771, -73.967061",
+    "city":"Brooklyn, New York",
+    "population":"35,622",
+    "income":28070.00 
+  },
+  {
+    "zipcode":11208,
+    "location":"40.669598, -73.871270",
+    "city":"Brooklyn, New York",
+    "population":"87,165",
+    "income":27078.00 
+  },
+  {
+    "zipcode":11219,
+    "location":"40.632769, -73.996642",
+    "city":"Brooklyn, New York",
+    "population":"85,987",
+    "income":26648.00 
+  },
+  {
+    "zipcode":11213,
+    "location":"40.671034, -73.936357",
+    "city":"Brooklyn, New York",
+    "population":"65,440",
+    "income":26366.00 
+  },
+  {
+    "zipcode":11216,
+    "location":"40.680854, -73.949144",
+    "city":"Brooklyn, New York",
+    "population":"55,775",
+    "income":25135.00 
+  },
+  {
+    "zipcode":11207,
+    "location":"40.670361, -73.893848",
+    "city":"Brooklyn, New York",
+    "population":"86,551",
+    "income":24163.00 
+  },
+  {
+    "zipcode":11211,
+    "location":"40.713507, -73.952578",
+    "city":"Brooklyn, New York",
+    "population":"85,089",
+    "income":23567.00 
+  },
+  {
+    "zipcode":11237,
+    "location":"40.704160, -73.921139",
+    "city":"Brooklyn, New York",
+    "population":"48,910",
+    "income":23104.00 
+  },
+  {
+    "zipcode":11233,
+    "location":"40.678089, -73.919867",
+    "city":"Brooklyn, New York",
+    "population":"61,955",
+    "income":22754.00 
+  },
+  {
+    "zipcode":11221,
+    "location":"40.691310, -73.927772",
+    "city":"Brooklyn, New York",
+    "population":"76,363",
+    "income":22305.00 
+  },
+  {
+    "zipcode":11224,
+    "location":"40.577257, -73.989762",
+    "city":"Brooklyn, New York",
+    "population":"51,205",
+    "income":21281.00 
+  },
+  {
+    "zipcode":11212,
+    "location":"40.662907, -73.912969",
+    "city":"Brooklyn, New York",
+    "population":"85,161",
+    "income":20839.00 
+  },
+  {
+    "zipcode":11206,
+    "location":"40.702037, -73.942444",
+    "city":"Brooklyn, New York",
+    "population":"69,032",
+    "income":18661.00 
+  },
+  {
+    "zipcode":11239,
+    "location":"40.644728, -73.879186",
+    "city":"Brooklyn, New York",
+    "population":"14,620",
+    "income":16919.00 
+  },
+  {
+    "zipcode":11358,
+    "location":"40.760467, -73.796418",
+    "city":"Flushing, New York",
+    "population":"38,647",
+    "income":51242.00 
+  },
+  {
+    "zipcode":11367,
+    "location":"40.730621, -73.822860",
+    "city":"Flushing, New York",
+    "population":"38,216",
+    "income":45285.00 
+  },
+  {
+    "zipcode":11354,
+    "location":"40.768208, -73.827403",
+    "city":"Flushing, New York",
+    "population":"54,329",
+    "income":37155.00 
+  },
+  {
+    "zipcode":11355,
+    "location":"40.750123, -73.820977",
+    "city":"Flushing, New York",
+    "population":"83,281",
+    "income":36973.00 
+  },
+  {
+    "zipcode":11371,
+    "location":"40.774052, -73.873628",
+    "city":"Flushing, New York",
+    "population":"0",
+    "income":0.00 
+  },
+  {
+    "zipcode":10007,
+    "location":"40.713973, -74.008336",
+    "city":"New York, New York",
+    "population":"3,522",
+    "income":112947.00 
+  },
+  {
+    "zipcode":10280,
+    "location":"40.708501, -74.016828",
+    "city":"New York, New York",
+    "population":"6,614",
+    "income":108536.00 
+  },
+  {
+    "zipcode":10162,
+    "location":"40.769298, -73.949942",
+    "city":"New York, New York",
+    "population":"1,726",
+    "income":108416.00 
+  },
+  {
+    "zipcode":10004,
+    "location":"40.691870, -74.014109",
+    "city":"New York, New York",
+    "population":"1,225",
+    "income":101868.00 
+  },
+  {
+    "zipcode":10069,
+    "location":"40.775551, -73.989689",
+    "city":"New York, New York",
+    "population":"1,403",
+    "income":88091.00 
+  },
+  {
+    "zipcode":10282,
+    "location":"40.717017, -74.015566",
+    "city":"New York, New York",
+    "population":"1,574",
+    "income":86066.00 
+  },
+  {
+    "zipcode":10006,
+    "location":"40.707970, -74.013610",
+    "city":"New York, New York",
+    "population":"1,447",
+    "income":81334.00 
+  },
+  {
+    "zipcode":10022,
+    "location":"40.758615, -73.967752",
+    "city":"New York, New York",
+    "population":"30,642",
+    "income":80406.00 
+  },
+  {
+    "zipcode":10005,
+    "location":"40.705390, -74.008988",
+    "city":"New York, New York",
+    "population":"884",
+    "income":79517.00 
+  },
+  {
+    "zipcode":10024,
+    "location":"40.786307, -73.970694",
+    "city":"New York, New York",
+    "population":"61,414",
+    "income":78066.00 
+  },
+  {
+    "zipcode":10028,
+    "location":"40.776865, -73.954721",
+    "city":"New York, New York",
+    "population":"44,987",
+    "income":77565.00 
+  },
+  {
+    "zipcode":10021,
+    "location":"40.769742, -73.961653",
+    "city":"New York, New York",
+    "population":"102,078",
+    "income":75472.00 
+  },
+  {
+    "zipcode":10023,
+    "location":"40.775394, -73.982197",
+    "city":"New York, New York",
+    "population":"62,206",
+    "income":72424.00 
+  },
+  {
+    "zipcode":10128,
+    "location":"40.781656, -73.950281",
+    "city":"New York, New York",
+    "population":"59,856",
+    "income":70031.00 
+  },
+  {
+    "zipcode":10017,
+    "location":"40.752292, -73.972393",
+    "city":"New York, New York",
+    "population":"16,201",
+    "income":69273.00 
+  },
+  {
+    "zipcode":10014,
+    "location":"40.733471, -74.007098",
+    "city":"New York, New York",
+    "population":"32,667",
+    "income":66601.00 
+  },
+  {
+    "zipcode":10016,
+    "location":"40.744983, -73.978262",
+    "city":"New York, New York",
+    "population":"51,217",
+    "income":66342.00 
+  },
+  {
+    "zipcode":10010,
+    "location":"40.739122, -73.982363",
+    "city":"New York, New York",
+    "population":"26,408",
+    "income":62467.00 
+  },
+  {
+    "zipcode":10011,
+    "location":"40.741844, -74.000711",
+    "city":"New York, New York",
+    "population":"46,669",
+    "income":61986.00 
+  },
+  {
+    "zipcode":10003,
+    "location":"40.731856, -73.989145",
+    "city":"New York, New York",
+    "population":"53,673",
+    "income":60891.00 
+  },
+  {
+    "zipcode":10012,
+    "location":"40.725639, -73.998090",
+    "city":"New York, New York",
+    "population":"26,000",
+    "income":58313.00 
+  },
+  {
+    "zipcode":10019,
+    "location":"40.766331, -73.985013",
+    "city":"New York, New York",
+    "population":"36,012",
+    "income":55869.00 
+  },
+  {
+    "zipcode":10044,
+    "location":"40.762050, -73.949933",
+    "city":"New York, New York",
+    "population":"9,520",
+    "income":49976.00 
+  },
+  {
+    "zipcode":10025,
+    "location":"40.797958, -73.964917",
+    "city":"New York, New York",
+    "population":"97,086",
+    "income":49733.00 
+  },
+  {
+    "zipcode":10018,
+    "location":"40.754969, -73.992126",
+    "city":"New York, New York",
+    "population":"4,255",
+    "income":48705.00 
+  },
+  {
+    "zipcode":10036,
+    "location":"40.759614, -73.991148",
+    "city":"New York, New York",
+    "population":"18,751",
+    "income":41002.00 
+  },
+  {
+    "zipcode":10001,
+    "location":"40.750722, -73.997276",
+    "city":"New York, New York",
+    "population":"17,310",
+    "income":40932.00 
+  },
+  {
+    "zipcode":10009,
+    "location":"40.726622, -73.978955",
+    "city":"New York, New York",
+    "population":"58,595",
+    "income":40176.00 
+  },
+  {
+    "zipcode":10013,
+    "location":"40.720067, -74.004829",
+    "city":"New York, New York",
+    "population":"25,042",
+    "income":38304.00 
+  },
+  {
+    "zipcode":10033,
+    "location":"40.849124, -73.935956",
+    "city":"New York, New York",
+    "population":"58,259",
+    "income":31348.00 
+  },
+  {
+    "zipcode":10038,
+    "location":"40.709336, -74.002943",
+    "city":"New York, New York",
+    "population":"15,574",
+    "income":31316.00 
+  },
+  {
+    "zipcode":10034,
+    "location":"40.869208, -73.921929",
+    "city":"New York, New York",
+    "population":"41,756",
+    "income":29479.00 
+  },
+  {
+    "zipcode":10040,
+    "location":"40.858134, -73.929031",
+    "city":"New York, New York",
+    "population":"46,599",
+    "income":27905.00 
+  },
+  {
+    "zipcode":10037,
+    "location":"40.813159, -73.937352",
+    "city":"New York, New York",
+    "population":"16,984",
+    "income":26561.00 
+  },
+  {
+    "zipcode":10032,
+    "location":"40.839194, -73.942591",
+    "city":"New York, New York",
+    "population":"63,842",
+    "income":26237.00 
+  },
+  {
+    "zipcode":10031,
+    "location":"40.825857, -73.949451",
+    "city":"New York, New York",
+    "population":"60,221",
+    "income":24285.00 
+  },
+  {
+    "zipcode":10002,
+    "location":"40.715952, -73.985870",
+    "city":"New York, New York",
+    "population":"84,870",
+    "income":24022.00 
+  },
+  {
+    "zipcode":10027,
+    "location":"40.811407, -73.953564",
+    "city":"New York, New York",
+    "population":"56,168",
+    "income":23150.00 
+  },
+  {
+    "zipcode":10026,
+    "location":"40.802320, -73.952943",
+    "city":"New York, New York",
+    "population":"30,377",
+    "income":22491.00 
+  },
+  {
+    "zipcode":10029,
+    "location":"40.792245, -73.945230",
+    "city":"New York, New York",
+    "population":"75,390",
+    "income":22232.00 
+  },
+  {
+    "zipcode":10030,
+    "location":"40.818492, -73.943283",
+    "city":"New York, New York",
+    "population":"25,847",
+    "income":17970.00 
+  },
+  {
+    "zipcode":10039,
+    "location":"40.826296, -73.937053",
+    "city":"New York, New York",
+    "population":"21,737",
+    "income":17370.00 
+  },
+  {
+    "zipcode":10035,
+    "location":"40.795487, -73.929501",
+    "city":"New York, New York",
+    "population":"32,702",
+    "income":14896.00 
+  },
+  {
+    "zipcode":10177,
+    "location":"40.755139, -73.975934",
+    "city":"New York, New York",
+    "population":"0",
+    "income":0.00 
+  },
+  {
+    "zipcode":10271,
+    "location":"40.708236, -74.010541",
+    "city":"New York, New York",
+    "population":"0",
+    "income":0.00 
+  },
+  {
+    "zipcode":10278,
+    "location":"40.715282, -74.004078",
+    "city":"New York, New York",
+    "population":"0",
+    "income":0.00 
+  },
+  {
+    "zipcode":10279,
+    "location":"40.712626, -74.008669",
+    "city":"New York, New York",
+    "population":"0",
+    "income":0.00 
+  },
+  {
+    "zipcode":10020,
+    "location":"40.758236, -73.978833",
+    "city":"New York, New York",
+    "population":"1",
+    "income":0.00 
+  },
+  {
+    "zipcode":10041,
+    "location":"40.702868, -74.009835",
+    "city":"New York, New York",
+    "population":"0",
+    "income":0.00 
+  },
+  {
+    "zipcode":10048,
+    "location":"40.711665, -74.012417",
+    "city":"New York, New York",
+    "population":"55",
+    "income":0.00 
+  },
+  {
+    "zipcode":10103,
+    "location":"40.760780, -73.977670",
+    "city":"New York, New York",
+    "population":"0",
+    "income":0.00 
+  },
+  {
+    "zipcode":10111,
+    "location":"40.759114, -73.977596",
+    "city":"New York, New York",
+    "population":"0",
+    "income":0.00 
+  },
+  {
+    "zipcode":10112,
+    "location":"40.759167, -73.979668",
+    "city":"New York, New York",
+    "population":"0",
+    "income":0.00 
+  },
+  {
+    "zipcode":10115,
+    "location":"40.810852, -73.963744",
+    "city":"New York, New York",
+    "population":"0",
+    "income":0.00 
+  },
+  {
+    "zipcode":10119,
+    "location":"40.750310, -73.992979",
+    "city":"New York, New York",
+    "population":"0",
+    "income":0.00 
+  },
+  {
+    "zipcode":10152,
+    "location":"40.758404, -73.972031",
+    "city":"New York, New York",
+    "population":"0",
+    "income":0.00 
+  },
+  {
+    "zipcode":10153,
+    "location":"40.763622, -73.972439",
+    "city":"New York, New York",
+    "population":"0",
+    "income":0.00 
+  },
+  {
+    "zipcode":10154,
+    "location":"40.757779, -73.972487",
+    "city":"New York, New York",
+    "population":"0",
+    "income":0.00 
+  },
+  {
+    "zipcode":10167,
+    "location":"40.754648, -73.974771",
+    "city":"New York, New York",
+    "population":"0",
+    "income":0.00 
+  },
+  {
+    "zipcode":10169,
+    "location":"40.754391, -73.976098",
+    "city":"New York, New York",
+    "population":"0",
+    "income":0.00 
+  },
+  {
+    "zipcode":10170,
+    "location":"40.752625, -73.975877",
+    "city":"New York, New York",
+    "population":"1",
+    "income":0.00 
+  },
+  {
+    "zipcode":10171,
+    "location":"40.755899, -73.973858",
+    "city":"New York, New York",
+    "population":"1",
+    "income":0.00 
+  },
+  {
+    "zipcode":10172,
+    "location":"40.755273, -73.974315",
+    "city":"New York, New York",
+    "population":"0",
+    "income":0.00 
+  },
+  {
+    "zipcode":10173,
+    "location":"40.754131, -73.979364",
+    "city":"New York, New York",
+    "population":"0",
+    "income":0.00 
+  },
+  {
+    "zipcode":10312,
+    "location":"40.547291, -74.179264",
+    "city":"Staten Island, New York",
+    "population":"58,867",
+    "income":67728.00 
+  },
+  {
+    "zipcode":10309,
+    "location":"40.530847, -74.221178",
+    "city":"Staten Island, New York",
+    "population":"27,207",
+    "income":65397.00 
+  },
+  {
+    "zipcode":10307,
+    "location":"40.506815, -74.241709",
+    "city":"Staten Island, New York",
+    "population":"11,669",
+    "income":64159.00 
+  },
+  {
+    "zipcode":10308,
+    "location":"40.551236, -74.150961",
+    "city":"Staten Island, New York",
+    "population":"26,451",
+    "income":61868.00 
+  },
+  {
+    "zipcode":10314,
+    "location":"40.598825, -74.163336",
+    "city":"Staten Island, New York",
+    "population":"84,821",
+    "income":59560.00 
+  },
+  {
+    "zipcode":10306,
+    "location":"40.569755, -74.122141",
+    "city":"Staten Island, New York",
+    "population":"55,698",
+    "income":55413.00 
+  },
+  {
+    "zipcode":10305,
+    "location":"40.596691, -74.074866",
+    "city":"Staten Island, New York",
+    "population":"38,450",
+    "income":48944.00 
+  },
+  {
+    "zipcode":10310,
+    "location":"40.632516, -74.116461",
+    "city":"Staten Island, New York",
+    "population":"22,852",
+    "income":46198.00 
+  },
+  {
+    "zipcode":10301,
+    "location":"40.627456, -74.094407",
+    "city":"Staten Island, New York",
+    "population":"38,805",
+    "income":45620.00 
+  },
+  {
+    "zipcode":10303,
+    "location":"40.629885, -74.174130",
+    "city":"Staten Island, New York",
+    "population":"23,530",
+    "income":42463.00 
+  },
+  {
+    "zipcode":10302,
+    "location":"40.630820, -74.137841",
+    "city":"Staten Island, New York",
+    "population":"16,406",
+    "income":42452.00 
+  },
+  {
+    "zipcode":10304,
+    "location":"40.603589, -74.102477",
+    "city":"Staten Island, New York",
+    "population":"38,972",
+    "income":41041.00 
+  }
+]

@@ -1,0 +1,216 @@
+@font-face {
+    font-family: scriptina;
+    src: url(../fonts/scriptina/SCRIPTIN.ttf);
+}
+@font-face {
+    font-family: brock-script;
+    src: url(../fonts/brock-script/BrockScript.ttf);
+}
+@font-face{
+	font-family:FontAwesome;
+	src: url(../fonts/fontawesome-webfont.woff);
+}
+/*public*/
+
+body{
+	background: #fafafa url('../img/wave.png') repeat;
+}
+.well{
+	border-radius: 10px;
+	background: #fafafa url("../img/well.png")
+}
+
+.fa {
+display: inline-block;
+font-family: FontAwesome;
+font-style: normal;
+font-weight: normal;
+line-height: 1;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+.little_widget a{
+	margin-top: 15px;
+	margin-left: 1%;
+	color: rgb(185, 197, 185);
+	float: left;
+}
+
+.itop {
+width: 20px;
+margin: 0 auto;
+text-align: center;
+position: relative;
+top: -32px;
+border: 1px solid #ddd;
+height: 20px;
+background: #eee;
+border-radius: 30px;
+font-size: 12px;
+line-height: 16px;}
+
+.itop a {
+color: #aaa;
+}
+
+.fa-chevron-up:before {
+content: "\f077";
+}
+
+/*begin heading*/
+.navbar{text-align: center;
+	background-color: rgba(34, 34, 34, 0.6);
+	border-color:rgba(0,0,0,0);
+}
+
+.navbar .nav{
+	float: none;
+	display: inline-block;
+	font-size: 15px;
+	vertical-align: top;
+	
+}
+.navbar-inverse .navbar-nav>li>a{
+	color: #ddd;
+
+}
+
+/*end heading*/
+header{text-align: center;
+	height: 700px;
+
+}
+.hero h1{
+	font-family: brock-script;
+	margin-top: 90px;
+	margin-bottom: 40px;
+	font-size: 40px;
+}
+.container{width:99%;}
+
+header .well{
+	max-width: 600px;
+	display: inline-block;
+	background-color: rgba(245, 245, 245, 0.75);
+}
+
+.bor{
+	background: url('../img/fengexian.jpg') no-repeat center center;
+	background-size: 280px 14px;
+	height: 22px;
+	
+	margin: 0 auto;
+}
+
+.hero .well .bor{width: 90%}
+.bor{width: 70%}
+header .well p{margin-top: 20px;
+	margin-bottom: 20px;}
+header .well h2, h3{margin-top: 25px;
+	margin-bottom: 25px;
+
+}
+
+
+.border{height: 20px;}
+
+.head{text-align: center;
+margin-bottom: 20px;}
+
+#zhizhi{float: right;}
+#qiqi{float: left;}
+
+.about img{margin: 8px;}
+
+.wedding {
+	background:  url('../img/grey.png') repeat;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #eee;
+	padding: 10px 20px;
+}
+.about {
+	background:  url('../img/grey.png') repeat;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #eee;
+	padding: 10px 20px;
+	min-height: 250px;
+}
+
+#gallery img{
+	
+	cursor: pointer;
+}
+#gallery ul {         
+          padding:0 0 0 0;
+          margin:0 0 0 0;
+      }
+#gallery li{
+	list-style: none;
+	margin-bottom:25px;
+
+}
+.next {
+    float:right;
+    text-align:right;
+}
+.controls{          
+    width:50px;
+    display:block;
+    font-size:11px;
+    padding-top:8px;
+    font-weight:bold;          
+}
+
+
+/***** Media Quries *****/
+@media (max-width: 452px) {
+	header {
+		height: auto;
+	}
+
+	.hero h1{
+		margin-top: 70px;
+		margin-bottom: 10px;
+		font-size: 26px; 
+	}
+	header .well h3{
+		font-size: 18px;
+		margin-top: 12px;
+		margin-bottom: 12px;
+	}
+	header .well h2{
+		font-size: 25px;
+	}
+	header .well p{
+		margin-top: 8px;
+	}
+	header .button{
+		margin-bottom: 20px;
+	}
+
+}
+
+/*form*/
+ #message_area{
+ 		width: 90%!important;
+ 		margin: auto;
+ }
+ #mc_embed_signup{  clear:left; font:14px Helvetica,Arial,sans-serif; }
+ #mc_embed_signup form{margin: auto;}
+ #mc_embed_signup .mc-field-group{display: inline-block;
+ 			width: 45%;
+ 			height: 100px;
+ 			min-width: 180px;
+ 			
+ 			margin-right: 2%;
+ 		}
+
+ .mc-field-group textarea{
+ 		width: 100%;
+ 		margin: auto;
+ 		min-height: 150px;
+
+ }

@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Pop Bike</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <!--
+      <script src="./d3/d3.v3.js"></script>
+    -->
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <script src="http://d3js.org/d3.geo.projection.v0.min.js"></script>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/mailchimp_081711.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/jianjuebujiaomycss.css">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link type="image/x-icon" href="favicon.ico" rel="shortcut icon"/>
+
+<style >
+ .input{
+  width: 20px; 
+    height: 20px; 
+    padding-top: 10px;
+ }
+ .choose_text{
+  font-size: 14px;
+  color: black;
+  vertical-align:top;
+ }
+ .clear_right{
+  clear:right;
+ }
+.triptime{
+  margin-top: -8px;
+
+}
+.moveslider{
+ font-size: 16px;
+ margin-top: 4px;
+}
+
+  h1 {
+      color:black;
+      text-align: center;
+      font-size: 45px;
+      font-family: Arial;
+      border: 0px;
+      }
+  h2 {
+      font-size: 30px;
+      border: 0px;
+      color: rgba(173, 204, 253, 0.96);
+
+      }
+
+  #name{
+    position: absolute;
+    top:30px;
+    left: 20px;
+    color:black;
+    font-size: 40px;}
+  #date{
+    position: absolute;
+    top: 80px;
+    left:20px;
+    color: black;
+    font-size: 12px;}
+  #temp{
+    position: absolute;
+    font-size: 18px;
+    top:120px;
+    left: 20px;
+    color: black;
+  }
+  #sun{
+    position: absolute;
+    top:200px;
+    left: 20px;
+    color: black;
+  }
+
+
+  #map {
+   
+   background: #444;
+    top:5px;
+      width: 100%;
+      height: 450px;
+  }
+        
+        .incomeLayer {
+          position: relative;
+            width: 3000px;
+            height: 3000px;     
+        }
+        
+        .incomeLayer svg {
+            position: absolute;
+            top: -4000px;
+        left: -4000px;
+        width: 8000px;
+        height: 8000px;
+        }
+        
+        .incomeLayer path {
+            stroke: white;
+            /*stroke-width: 2px;*/
+           
+            fill-opacity: .7;
+        }
+        .stations, .stations svg {
+      position: absolute;
+      z-index: 100;
+
+    }
+    
+    body{width:98%;}
+    
+   
+
+    .stations svg {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      padding-right: 100px;
+      font: 10px sans-serif;
+     
+    }
+
+    .stations circle {
+      fill: brown;
+      stroke: black;
+      stroke-width: 0.5px;
+    }
+    .tooltip{
+       width: 200px;
+      height: 80px;
+      z-index:999;
+      margin-top: 10px;
+      border-radius: 7px;
+      
+    }
+    #tooltip_div{
+     /* background: rgba(173, 204, 253, 0.56);*/
+      border-radius: 5px;
+     /* border:1px solid blue;*/
+      width: 200px;
+      height: 80px;
+      
+      /* float: right; */
+      margin-right: 0px;
+      top: 20px;
+      right: 20px;
+      /* position: absolute; */
+      /* display: inline; */
+      position: absolute;
+      z-index: 999;
+      
+      border-radius: 9px;
+      text-align: center;
+
+    }
+    #choose{
+      
+    	color: black;
+      background-color: white;
+      margin-top:-55px;
+      margin-left: 0px;
+      border:1px solid blue;
+      width:280px;
+      border-radius: 5px;
+      background-color: rgba(173, 204, 253, 0.56)
+
+    }
+    #weather{
+
+      border-radius: 5px;
+      border:1px solid blue;
+      width: 280px;
+      height: 280px;
+      top: 240px;
+      background-color: rgba(173, 204, 253, 0.56);
+      left: 80px;
+      float: left;
+      position: absolute;
+    
+      }
+  #weather h2{
+      color: rgb(0, 136, 255)
+      }
+
+  #googleMap{
+     top:110px;
+      width: 100%;
+      height: 80%;
+    }
+  .enter {
+    fill: green;
+  }
+
+  .update {
+    fill: yellow;
+  }
+  .exit {
+    fill: brown;
+  }
+.path {
+          fill: black;
+          stroke: #000;
+          stroke-width: .5px;
+        }
+
+        .state-boundary {
+          stroke-width: 1px;
+        }
+
+        .bob-boundary {
+          stroke: #aaa;
+        }
+
+#background{
+  background-position: absolute;
+}
+#slider{
+  position: absolute;
+  margin:5px 0px 50px 10px;
+  border: 1px solid black;
+  width: 98%;
+  height: 10px;
+  stroke:5px;
+
+  color: rgba(173, 204, 253, 0.96);
+}
+
+#slider .ui-slider-handle { border-color: rgba(173, 204, 253, 0.96); border-width:2px;}
+#slider .ui-slider-range { background: rgba(173, 204, 253, 0.96); }
+#slidertext{
+  top:1050px;
+  left:40px;
+  position: absolute;
+  color:rgba(173, 204, 253, 0.96);
+  font: 40px "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+
+.node {
+  font:  9px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  fill: #bbb;
+}
+
+.node:hover {
+  fill: #000;
+  font-size: 15px;
+}
+
+.link {
+  stroke: steelblue;
+  stroke-opacity: .4;
+  fill: none;
+  pointer-events: none;
+}
+
+.node:hover,
+.node--source,
+.node--target {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.node--source {
+  fill: #2ca02c;
+}
+
+.node--target {
+  fill: #d62728;
+}
+
+.link--source,
+.link--target {
+  stroke-opacity: 1;
+  stroke-width: 2px;
+}
+
+.link--source {
+  stroke: #d62728;
+}
+
+.link--target {
+  stroke: #2ca02c;
+}
+
+#red{
+ 
+  font-size:15px;
+  color:#d62728;
+}
+#blue{
+   
+  font-size: 15px;
+  color: #2ca02c;
+}
+#black{
+ 
+  font-size: 15px; 
+  color: black;
+}
+#wheeldiscription{
+
+  font-size: 15px;
+  text-align: justify;
+
+}
+
+.logo{
+	float: left;
+	display: inline;
+	font-size: 31px;
+	margin-left: 20px;
+	font-family: cursive;
+	font-weight: bold;
+	color: rgba(173, 204, 253, 0.96);
+}
+.copyright{
+  font-size: 10px;
+  color:white;
+}
+div.center{margin:auto;text-align: left; display: inline-block;}
+#chord-legend-container{margin-top:20px;clear:none;display: inline-block; width:70%; margin-left:10%;text-align: justify;  vertical-align: middle;}
+#chord-legend-container span {padding-right:20px;}
+#proj_2 >svg{
+    overflow:visible !important;
+    z-index: 9999;
+    
+    /*border: 1px solid blue;*/
+    clear:none;
+    display: inline-block;}
+    #proj_2{padding-right:40px}
+
+#people-and-bikes-header{margin-top:60px;}
+#tripdiscription{
+ font-size: 15px;
+}
+
+</style>
+  </head>
+  <script src="underscore.js"></script>
+  <body>
+
+  <!--nav bar-->
+  <div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+ 
+    <div class="container">    
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".bs-navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon icon-bar"></span>
+          <span class="icon icon-bar"></span>
+          <span class="icon icon-bar"></span>
+        </button>     
+      </div>
+
+      <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      	<div class="logo">POP BIKE 2014
+          <span class="copyright">&copy;Qijing Zhang</span>
+        </div>
+
+        <ul class="nav navbar-nav">
+         <!-- Navigation links. Note down the class name. It is important -->
+          <li><a href="#home" class="anchorLink">People and Bikes</a></li>
+          <li><a href="#Project_3" class="anchorLink"> Trips</a></li>
+          <li><a href="#bicycle_wheel" class="anchorLink">Bicycle Wheel</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+<a name="home" id="home"></a>
+  <!--header-->
+  <header>
+    <div style="margin-top: 0px;" class="row">
+      <div class="col-md-12">
+        <div class="head">
+          
+           <h2 id="people-and-bikes-header">People and Bikes</h2>
+          
+        </div>
+      </div>
+    </div>
+     
+    <div id="googleMap" >
+      <div id = "filter"></div>  
+    </div>
+    
+    <div class = 'container'>
+        <div id="tooltip_div"></div>
+    </div>
+
+      <!--weather area--> 
+    <div id="weather">
+        <div style="z-index:999;" id="choose">
+        <span class="choose_text">Select Layers</span><br/>
+          <input id = 'landmarks' class= "input" type="checkbox" checked value="landmarks" onclick="mus()"/><span class="choose_text">landmarks</span>
+    		  <input id = 'stations' class= "input" type="checkbox" checked value="stations" onclick="sta()"/><span class="choose_text">stations</span>
+    		  <input id = 'incomeLayer'  class= "input" type="checkbox" checked value="income" onclick="inc()"/><span class="choose_text">income</span>
+  	      
+	      </div>
+        <span class="choose_text">Weather</span><br/>
+        <div id="weather-container">
+      		<p id="name"></p>
+      		<p id="date"></p>
+      		<p id="temp"></p>
+      		<p id="sun"></p>
+      </div>
+    </div>
+        <!--Weather area-->
+    <!--p id="source">source:<a href="http://www.citibikenyc.com/" target="_blank">Citi  Bike</p-->
+   
+  <!-- </div> -->
+ 
+      <!--form class = 'slider'>
+      <input id="slider" type="range" name="slider" min="0" max="144" value="10" onchange="getWeather(this.value)" step="1"/>
+    </form-->
+    <div id = "wode_slider"></div>
+   </header>
+
+   <!--Project 01-->
+   <a name="about" id="about"></a>
+   <div class="border"></div>
+   <div class="aboutus"></div>
+
+
+
+  <!--fengexian-->
+  
+  <a name="Project_3" id="Project_3"></a>
+  <hr>
+  <div class="itop"><a href="#home" class="anchorLink"><i class="fa fa-chevron-up"></i></a></div>
+
+  <!--fengexian-->
+
+  <!--Project_3-->
+  <div class="container">
+      <div class="row">
+         <div class="col-md-12">
+            <div class="head">
+               
+					   <h2>Citi Bike Trips</h2>
+              <div class="triptime">As of Aug 1, 2014</div>
+              <div class="moveslider">Move the slider to view trips</div>
+              <span id="tripdiscription">Citi Bike Trips is a map with a slider. Move the slider to see changes of indiividual trips. Green circles on the map present the start of trips, red circles present the end of trips, and yellow circles are current trips.</span>
+            </div>
+         </div>  
+      </div>
+   </div>
+
+
+  <div id="map"></div>
+  <div id="slider"></div>
+  <div id="slidertext"></div>
+  
+  <div>&nbsp;</div> 
+
+  
+  <!--Project_3-->
+
+
+
+
+<!--fengexian-->
+
+  <a name="bicycle_wheel" id="bicycle_wheel"></a>
+  <hr>
+  <div class="itop"><a href="#home" class="anchorLink"><i class="fa fa-chevron-up"></i></a></div>
+ 
+<!--fengexian-->
+  <!--Bicycle Wheel-->
+  <div class="container">
+      <div class="row">
+         <div class="col-md-12">
+            <div class="head">
+            
+               <h2>Bicycle Wheel</h2>
+            
+            </div>
+         </div>
+        
+
+      </div>
+    <table>
+      <tr class="center" id="chord-legend-container">
+          <td class="center" id="proj_2"></td>
+          <td>
+            <span id="wheeldiscription">Bike Wheel displays 332 Citi Bike stations in a chord diagram. The links in the circle are connections between start stations and end stations. The width of the links show number of trips to and from the selected station. When users hover over a station name, the trips to and from the station are highlighted in red and green colors.</span>    
+            <span id="red">Red is trips originating at the selected station</span>
+            <span id="blue">Green is trips ending at the selected destination</span>
+            <span id="black">Black is the current station</span> 
+            <span id ="sourcetime">Data is for a 24 hour period (Aug 1, 2014)</span><br/>
+          </td>
+        </tr>
+     </table>
+   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">         
+          <div class="modal-body">                
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+  </div>
+  <!--Bicycle Wheel-->
+  <!--fengexian-->
+  <div class="border"></div>
+  <a name="Project_4" id="Project_4"></a>
+  <hr>
+  <div class="itop"><a href="#home" class="anchorLink"><i class="fa fa-chevron-up"></i></a></div>
+  <div class="border"></div>
+  <!--fengexian-->
+
+  <!--Project 4-->
+  <!--
+  <div class="container">
+    <div class="row">
+
+       <div class="col-md-12">
+          <div class="head">
+             <div class="bor"></div>
+              <h2>Project 4 Place holder</h2>
+             <div class="bor"></div>
+          </div>
+       </div>
+       <div class="col-md-12"></div>
+     </div>
+  </div>
+-->
+   <!--
+   </div>
+ -->
+   <!--Project 4-->
+
+
+  <!--fengexian-->
+  <div class="border"></div>
+  <a name="photos" id="photos"></a>
+ <!--  <hr> -->
+ <!--  <div class="itop"><a href="#home" class="anchorLink"><i class="fa fa-chevron-up"></i></a></div> -->
+<!--   <div class="border"></div> -->
+  <!--fengexian-->
+
+  <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+            <p>Copyright © <a href="#">Qijing Zhang</a></p>
+            <div class="border"></div>
+      </div>
+    </div>
+  <div class="clearfix"></div>
+  </div>
+</footer>
+  
+  </body>
+
+   <script>
+        
+    var diameter = 500,
+        radius = 250,
+        innerRadius = radius - 120;
+
+
+    var cluster = d3.layout.cluster()
+          .size([360, innerRadius])
+          .sort(null)
+          .value(function(d) { return d.tripduration; });
+   
+
+    var bundle = d3.layout.bundle();
+
+    var line = d3.svg.line.radial()
+        .interpolate("bundle")
+        .tension(.85)
+        .radius(function(d) { 
+          return d.y; })
+        .angle(function(d) { 
+            return d.x / 180 * Math.PI; });
+
+    var svg = d3.select("#proj_2").append("svg")
+          .attr("width", diameter)
+          .attr("height", diameter)
+          .append("g")
+          .attr("transform", "translate(" + radius + "," + radius + ")");
+
+    var link = svg.append("g").selectAll(".link"),
+        node = svg.append("g").selectAll(".node");  
+
+        d3.csv("trips.csv", function(error, data){
+          var hier = packageHierarchy(data);
+          var nodes = cluster.nodes(hier);
+          var links = getEdges(nodes);
+
+
+
+             link = link
+              .data(bundle(links))
+              .enter().append("path")
+              .each(function(d) { d.source = d[0], d.target = d[d.length - 1]; })
+              .attr("class", "link")
+              .attr("d", line);
+
+            node = node
+              .data(nodes.filter(function(n) { return !n.children; }))
+              .enter().append("text")
+              .attr("class", "node")
+              .attr("dy", ".31em")
+              .attr("transform", function(d) { return "rotate(" + (d.x - 90) + ")translate(" + (d.y + 8) + ",0)" + (d.x < 180 ? "" : "rotate(180)"); })
+              .style("text-anchor", function(d) { return d.x < 180 ? "start" : "end"; })
+              .text(function(d) { return d.key; })
+              .on("mouseover", mouseovered)
+              .on("mouseout", mouseouted);
+                });
+
+        function transformator(d) {
+            var trans = "rotate(" + (d.x) + ")translate(" + -d.y + ")";
+
+            if (0<d.x && d.x<=90)
+              trans+="rotate(0)";
+
+            if (90<d.x && d.x<=180)
+              trans+="rotate(180)";
+
+            if (180<d.x && d.x<=270)
+              trans+="rotate(175)";
+
+            if (270<d.x && d.x<=360)
+              trans+="rotate(5)";
+
+            return trans;
+          }
+
+        function mouseovered(d) {
+          node
+              .each(function(n) { n.target = n.source = false; });
+
+          link
+              .classed("link--target", function(l) { if (l.target === d) return l.source.source = true; })
+              .classed("link--source", function(l) { if (l.source === d) return l.target.target = true; })
+            .filter(function(l) { return l.target === d || l.source === d; })
+              .each(function() { this.parentNode.appendChild(this); });
+
+          node
+              .classed("node--target", function(n) { return n.target; })
+              .classed("node--source", function(n) { return n.source; });
+        }
+
+        function mouseouted(d) {
+          link
+              .classed("link--target", false)
+              .classed("link--source", false);
+
+          node
+              .classed("node--target", false)
+              .classed("node--source", false);
+        }  
+
+        function packageHierarchy(classes){
+           console.log(classes);
+          var map = {};
+
+          function find(name, data) {       
+             //console.log(name);
+          // var node = map[name], i;  
+            var node = map[name], i;           
+            if (!node) {
+              node = map[name] = data || {name: name, children: []};
+               if(name.length){
+                  if(name === "station"){
+                    node.parent = find("");
+                  }else
+                    node.parent = find("station");
+                    node.parent.children.push(node);
+                    node.key = name.substring(i + 1);
+               }
+            }
+             return node;
+            }
+          classes.forEach(function(d) {
+              find(d.name, d);
+               // console.log(d);
+               //console.log(d.name); 
+             });
+            return map[""];
+        }
+
+
+        function getEdges(nodes){
+          console.log("nodes");
+          var map = {},
+              edges = [];
+
+          // Compute a map from name to node.
+          nodes.forEach(function(d) {
+            map[d.name] = d;
+          });
+
+          // For each import, construct a link from the sourFce to target node.
+          nodes.forEach(function(d) {
+            if (typeof d.direction !== 'undefined')
+              edges.push({source: map[d.name], target: map[d.direction]});
+          });
+
+          return edges;
+        }
+
+  </script>
+
+
+    <script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/myjs.js"></script>
+    <!--
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+  -->
+    <script src="underscore.js"></script>
+    <!--
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyALKOjACqIesNm0E2UvqfE3EYlmvY0og0E&sensor=false"></script>
+    -->    
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=panoramio"></script>
+    <!--
+    <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js?1.29.1"></script>
+  -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="jquery_ui.js"></script>
+    <link rel="stylesheet" href="jquery_ui.css">
+    <!--
+    <script type="text/javascript" src="scripts.js"></script>
+  -->
+    <script type='text/javascript' src='js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+ 
+    <script>
+
+  function mus(){console.log(); if ($('#landmarks')[0].checked == true){console.log('a');panoramioLayer.setMap(map)}
+      else{console.log('b');panoramioLayer.setMap(null)};
+      }
+  function inc(){console.log(); if ($('#incomeLayer')[0].checked == true){console.log('a');$('.incomeLayer').css('display','visible')}
+      else{console.log('b');$('.incomeLayer').css('display','none')}
+      }
+  function sta(){console.log(); if ($('#stations')[0].checked == true){console.log('a');$('.stations').css('display','visible')}
+      else{console.log('b');$('.stations').css('display','none')}
+      }
+  //////////////////////////////////weather////////////////////////////////////////////////////    
+     // var weatherURL = "http://api.openweathermap.org/data/2.5/weather?q=New%20York,us";
+  var weatherURL = "http://api.worldweatheronline.com/free/v2/weather.ashx?q=new%20york&format=json&num_of_days=5&key=a0738226de98af1a65b8fa95eb0a2";
+  var stationURL = "http://www.citibikenyc.com/stations/json";
+  var bikeURL = "http://appservices.citibikenyc.com/data2/stations.php";
+
+
+  function getWeather(weather){
+
+    $.ajax({
+        url: weatherURL,
+        type:'GET',
+        dataType:'jsonp',
+        error: function(data){
+          console.log("I got a problem");
+        },
+        success: function(data){
+
+          var n = data.data.request[0].query.lastIndexOf(",");
+          // console.log(data.data.request[0].query.substr(0, n));
+
+          var weatherLocation = data.data.request[0].query.substr(0, n);
+          // var weatherDate = d3.time.format("%X   %a %m/%d/%Y")(new Date(data.data.weather[0].date));
+          var weatherDate = data.data.weather[0].date
+          // console.log(weatherDate);
+          var weatherSunrise =data.data.weather[0].astronomy[0].sunrise;
+          var weatherSunset = data.data.weather[0].astronomy[0].sunset;
+          var weatherTemp = data.data.current_condition[0].temp_F;
+          var weatherDescription = data.data.current_condition[0].weatherDesc[0].value;
+
+          var format = d3.time.format("%a %X  %x");
+            time = new Date();
+            weatherDate = format(time);
+          // console.log(weatherDate);
+          // console.log(time);
+          // console.log(weatherTemp);
+          // console.log(weatherDescription);
+          
+          $('#name').html("<p>" + weatherLocation + "<p>");
+        $('#date').html("<p>" + weatherDate + "</p>" + "<br/>");
+
+          $('#temp').html("<p>" + weatherTemp + " &#8457; &nbsp&nbsp" + weatherDescription + "</p>" );
+        $('#sun').html('Sunrise:' + weatherSunrise + "<br/> Sunset " + weatherSunset + "<br/>");
+        setTimeout(getWeather,60000);
+
+        }
+     });
+  
+  } 
+  getWeather();  
+  // console.log(getWeather());
+  ////////////////////////////////geomap///////////////////////////////////
+    var width = 800 ,
+      height = 600 ;
+    function initialize(){
+
+    var newyork = new google.maps.LatLng(40.714623,-74.006605);
+    var mapOptions = {
+      center: newyork,
+        zoom:12,
+        mapTypeId:google.maps.MapTypeId.ROADMAP,
+        // fillColor: 'black',
+        // styles: mapstyle
+
+    };
+
+    map = new google.maps.Map(d3.select("#googleMap").node(), mapOptions);
+////////////////bikelayer////////////////////////////////////////
+    var bikeLayer = new google.maps.BicyclingLayer();     
+        bikeLayer.setMap(map);
+////////////////////panoramio layer//////////////////////////////
+    panoramioLayer = new google.maps.panoramio.PanoramioLayer();
+      
+    panoramioLayer.setTag('museum'||'landmark'||'empire state building'||'times square'||'building'||'statue of liberty');
+    
+/////////income layer////////////////////////////////////////////
+      tooltipdiv = d3.select("#tooltip_div")
+              .append("div")
+              .attr("class", "tooltip")
+              ;
+    var color = d3.scale.quantize()
+        .range(["rgb(218, 218, 235)","rgb(188, 189, 220)","rgb(158, 154, 200)","rgb(128, 125, 186)","rgb(106, 81, 163)","rgb(74,20, 134)"]);
+    d3.json("incomecsv.json", function(data){
+
+      color.domain([
+            d3.min(data, function(d) { return d.income; }), 
+            d3.max(data, function(d) { return d.income; })
+      ]);
+      
+      d3.json("nyc-zip-code-tabulation-areas-polygons.geojson", function(nyc){
+        var incomeMax, incomeMin;
+        // console.log(nyc.features);
+        for (var i = 0; i < data.length; i++) {
+          var dataCode = data[i].zipcode;
+          var dataValue = data[i].income;
+            // console.log(dataValue);
+          for (var j = 0; j < nyc.features.length; j++) {           
+          // console.log(nyc.features[j].properties.postalCode);
+            var nycCode = nyc.features[j].properties.postalCode;
+      
+            if (dataCode == nycCode) {              
+          //    //Copy the data value into the JSON
+              nyc.features[j].properties.value = dataValue; 
+              // console.log(nyc.features[j].properties.value)        
+          //    //Stop looking through the JSON
+              break;
+              
+            }
+          }   
+        }
+
+        var incomeLayer = new google.maps.OverlayView();
+
+          incomeLayer.onAdd = function () {
+
+            var layer = d3.select(this.getPanes().overlayMouseTarget).append("div")
+                .attr("class", "incomeLayer");
+
+            var svg = layer.append("svg")
+              .attr("width", width )
+              .attr("height", height)
+
+            var adminDivisions = svg.append("g").attr("class", "AdminDivisions");
+
+            incomeLayer.draw = function () {
+
+              var markerOverlay = this;
+              var overlayProjection = markerOverlay.getProjection();
+
+              // Turn the overlay projection into a d3 projection
+              var googleMapProjection = function (coordinates) {
+                
+                var googleCoordinates = new google.maps.LatLng(coordinates[1], coordinates[0]);
+                var pixelCoordinates = overlayProjection.fromLatLngToDivPixel(googleCoordinates);
+                return [pixelCoordinates.x + 4000 , pixelCoordinates.y + 4000];
+              }
+
+                path = d3.geo.path().projection(googleMapProjection);
+                adminDivisions.selectAll("path")
+                  .data(nyc.features)
+                  .attr("d", path) // update existing paths
+                  .enter().append("svg:path")
+                  .attr("d", path)
+                  .style("fill", function(d){
+                    var value = d.properties.value;               
+                      if (value) {
+                        return color(value);
+                      } else {
+                        //If value is undefined…
+                        return "#ccc";
+                      }
+                  })
+                  .on("mouseover", function(d){
+                    // console.log(d);
+                    tooltipdiv
+                            .html("Income:<span class=\"statlabel\">" + d.properties.value + "</span><br>Zipcode:<span class=\"statlabel\">" + d.properties.postalCode + "</span><br>Neighborhood: <span class=\"statlabel\">" + d.properties.PO_NAME + "</span>")
+                            .style("background", "#ddd")
+                            .style("height", "auto")
+                            .style("z-index", 100)
+                            .transition()
+                            .duration(250)
+                            .style("opacity", 1)
+                            ;
+                  })
+                  .on("mouseout", function(){
+                    tooltipdiv.transition()
+                            .duration(250)
+                            .style("opacity", 1e-6)
+                            .style("z-index", -100)
+                            .style("width", "200px")
+                            .style("height", "80px")
+                            ;
+
+                  });
+            };
+
+          };
+        incomeLayer.setMap(map);
+        google.maps.event.addListener(incomeLayer, "mouseover", function(){
+          incomeLayer.setStyle(function(feature){
+            return({
+              fillColor: red,
+              strokeWeight: 4
+            });
+          })
+        })
+      })
+    })
+  
+  function style(feature){
+    return{
+
+    }
+  } 
+////////////////////////bike station//////////////////////////////////
+
+d3.csv("bikestation.csv", function(data){
+      // console.log(data);
+    var stationlayer = new google.maps.OverlayView();
+
+     // Add the container when the overlay is added to the map.
+      stationlayer.onAdd = function() {
+        var layer = d3.select(this.getPanes().overlayMouseTarget).append("div")
+            .attr("class", "stations");
+
+     // Draw each marker as a separate SVG element.
+    // We could use a single SVG, but what size would it have?
+        stationlayer.draw = function() {
+          var projection = this.getProjection(),
+                padding = 10;
+          // console.log(data);
+           // console.log(d3.entries(data));     
+          var sMarker = layer.selectAll("svg")
+                .data(d3.entries(data))
+                .each(transform)//update existing markers 
+                .enter().append("svg:svg")
+                .each(transform)
+                .attr("class", "sMarker");
+    // Add a circle
+          sMarker.append("svg:circle")                
+                .attr("cx", padding)         
+            
+                .attr("cy", padding)
+
+             
+                .attr("r", function(d){
+                  // console.log(d.value)
+                  // console.log(d.value.totalDocks/5);
+                  return d.value.totalDocks/7
+                })
+                .style("fill","yellow")
+                .style("stroke","brown")
+              .style("fill-opacity",function(d){
+            return d.value.totalDocks/70;
+            // console.log("exit");
+            });
+            // sMarker.append("svg:text")
+           //      .on("mouseover",function(d){
+           //       console.log(d);
+           //       $('#tooltip').html("<h2>" + d.value.neighborhood + "</h2>" + "<br/>");
+           //      })
+           //      .on("mouseout", mouseout)  ;             
+
+
+      // Add a label.
+            sMarker.append("svg:text")
+                .attr("x", padding + 7)
+                .attr("y", padding)
+                .attr("dy", ".31em")
+                .style("background", "white")
+                // .style("font-size", "11px")
+                .text(function(d) { return d.value.totalDocks; });
+    
+
+        function transform(d){
+                              
+                  d = new google.maps.LatLng(d.value.latitude, d.value.longitude);
+                  d = projection.fromLatLngToDivPixel(d);
+                  // console.log(d.x);
+                  return d3.select(this)
+
+
+                  .style("left", (d.x - padding) + "px")
+                    .style("top", (d.y - padding) + "px");
+                    
+            
+            }
+        };      
+      };   
+  // Bind our overlay to the map…
+  stationlayer.setMap(map);
+});
+
+ 
+
+  } 
+
+  google.maps.event.addDomListener(window, 'load', initialize);
+
+  </script> <!-- End of People and Bikes -->
+
+  <!-- realtime trip data -->
+<script>
+  var margin = {top:0, right:0, bottom:0, left:0},
+  width = 1120 - margin.left - margin.right,
+  height = 800 - margin.top - margin.bottom;
+/////////////////////////////slider/////////////////////////////////////////////
+  $(function() {
+    $( "#slider" ).slider({
+      range: true,
+        min: 0,
+        max: 1439,
+        step: 1,
+        animate:"fast",
+        slide: function(e, ui) {
+          console.log(ui.value);
+
+            var hours = Math.floor(ui.value / 60);
+            var minutes = ui.value - (hours * 60);
+
+            if(hours.length == 1) hours = '0' + hours;
+              console.log(hours);
+              if(minutes.length == 1) minutes = "0" + minutes;
+
+            $('#slidertext').html("Time: " + hours+':'+minutes);
+
+  /////////////////////////////////trips///////////////////////////////                 
+          d3.csv("bikedirection8_1_2014.csv",function(sta){
+
+            firstTime = new Date(sta[0].starttime); 
+
+              filtered = sta.filter(function(data, i){
+              // console.log(j);
+              return((new Date(sta[i].starttime).getTime() - firstTime )/60000 == ui.value) 
+            })
+                // console.log(filtered);
+              update(filtered);
+              scatter(filtered);
+          })
+
+          // d3.json( ui.value + ".json", function(data){
+          //   // console.log(ui.value);
+          //   console.log(data);
+          //   // console.log(data.stationBeanList);
+          //   // console.log(data.station_data.latitude);
+          //   // activeData = data.station_data;
+          //   // draw_station(activeData);
+
+
+          // })
+
+        }
+    });
+  });
+///////////////////////////////run///////////////////////////
+  $(document).ready(function(){
+    draw_map();
+  })
+///////////////////////////////draw maps/////////////////////////
+// /The global svg
+var svg;
+//set projection
+var projection = d3.geo.mercator()
+  .center([-74, 40.76])
+  .scale([200000])
+  .translate([(width) /1.6, (height)/6]);
+
+//create path variable   
+var path = d3.geo.path()
+  .projection(projection);
+
+  function draw_map(){
+
+    svg = d3.select("#map")
+      .append("svg")
+      .attr("width", "100%")
+      .attr("height", "450px");
+
+    svg.append("path")
+        .datum(d3.geo.graticule())
+        .attr("fill", "none")
+        .style("stroke", "white")
+        .style("stroke-width", "0.5px");
+
+    d3.json("nyc.json", function(error, nyb) {       
+    // console.log(nyb);         
+      var g = svg.append("g");
+      g.append("g")
+        .attr("id", "boroughs")
+        .selectAll(".state")
+        .data(nyb.features)
+        .enter()
+        .append("path")
+        .attr("class", function(d){ return d.properties.name; })
+              .attr("d", path);
+    });
+
+  } 
+
+  function update(data){  
+    // console.log(data);
+    
+    // console.log(data);
+    // console.log(data.bikeid)
+////join
+    var sStations = svg.selectAll("circle")
+        .data(data);
+////update      
+      sStations.attr("class", "update")
+      .transition()
+          .duration(750)
+          .style("fill-opacity", 1);
+
+/////enter new
+      sStations.enter().append("circle")
+        .attr("class", "enter")
+        .attr("cx",function(d, i){    
+          // console.log(d);      
+          lon = d.sslog;
+          lat = d.sslat;
+          //console.log(projection([lon, lat])[0]);
+          return projection([lon, lat])[0];         
+        })
+        .attr("cy",function(d, i){ 
+
+          lon = d.sslog;
+          lat = d.sslat;
+          //console.log(projection([lon, lat])[1]);
+          return projection([lon, lat])[1]; 
+        })
+        .attr("r", 3)
+        // .style("fill","#7497F7")
+        .style("fill-opacity", 1e-6);
+        
+      sStations.transition()
+        .duration(function(d){ return d.tripduration})
+        .attr("cx",function(d, i){          
+          lon = d.eslog;
+          lat = d.eslat;
+          //console.log(projection([lon, lat])[0]);
+          return projection([lon, lat])[0];         
+        })
+        .attr("cy",function(d, i){ 
+
+          lon = d.eslog;
+          lat = d.eslat;
+          //console.log(projection([lon, lat])[1]);
+          return projection([lon, lat])[1]; 
+        })
+        .attr("r", 4)
+        .transition()
+        .style("fill-opacity", 1);
+        
+//////////exit remove old
+      sStations.exit()
+      .attr("class", "exit")
+        .transition()
+        .duration(750)
+        .attr("y", 60)
+        .style("fill-opacity", 1e-6)
+      .remove();
+    
+  }
+//////////////scatter//////////////////////////////////// 
+  function scatter(data){
+
+    // console.log(data);
+
+  }
+
+////////////////stations//////////////////////////////////
+  function draw_station(sta){
+// console.log(sta)
+    // draw_station(sta[0]);
+    console.log(sta[0].executionTime);  
+    var points = svg
+        .selectAll(".nameinfo")
+        // .selectAll("circle")
+        .data(sta, function(d){
+          // console.log(d.availableBikes);
+          return d.id});
+
+    var pointsEnter = points
+        .enter()
+        .append("g")
+        .attr("class", "nameinfo");
+
+      pointsEnter
+        .append("circle")
+        .attr("cx",function(d){     
+          // console.log(d.longitude);      
+          lon = d.longitude;
+          lat = d.latitude;
+          console.log(projection([lon, lat])[0]);
+          return projection([lon, lat])[0];         
+        })
+        .attr("cy",function(d, i){ 
+
+          lon = d.longitude;
+          lat = d.latitude;
+          //console.log(projection([lon, lat])[1]);
+          return projection([lon, lat])[1]; 
+        })
+        .attr("r",5)
+        // .style("stroke", 3)
+        .style("fill","#7497F7")
+        .style("fill-opacity",function(d){
+            // console.log("exit");
+          return d.availableBikes/(d.availableBikes + d.availableDocks);
+        });
+        
+        
+
+      svg.selectAll('.nameinfo circle')
+        .data(sta, function(d){
+          return d.availableBikes;
+        })
+        .transition().duration(500)
+        .attr("r",function(d){
+
+          scale = d3.scale.linear() 
+            .domain([0, (d.availableBikes + d.availableDocks)])
+            .range([0, 6])
+          // console.log(scale(d.availableBikes));
+          return d.availableBikes;
+        })
+          
+
+    var pointsExit = points.exit().transition().duration(500).remove();
+
+      // pointsExit
+      //  .selectAll('circle')
+      //  .attr('r', 0);
+
+      // sStations.exit().remove();
+
+  }
+</script>  
+ <!--
+        <script>
+      function mus(){console.log(); if ($('#landmarks')[0].checked == true){console.log('a');$('.museum').css('display','visible')}
+    else{console.log('b');$('.museum').css('display','none')}
+  }
+      function sta(){console.log(); if ($('#stations')[0].checked == true){console.log('a');$('.stations').css('display','visible')}
+    else{console.log('b');$('.stations').css('display','none')}
+  }
+      </script>
+  -->
+
+
+</html>
