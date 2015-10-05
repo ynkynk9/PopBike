@@ -9,4 +9,4 @@ Data visualization is a technique of data analysis and processing that uses pict
 
 Popbike Goals
 ----------------
-Illustrate the relationship between bike use and demographics   Make static data spatial and dynamic  Help people know about NYC transit and tourist options through data visualization
+Illustrate the relationship between bike use and demographics     Make static data spatial and dynamic   Help people know about NYC transit and tourist options through data visualization
