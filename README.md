@@ -16,7 +16,7 @@ Popbike Goals
 Data in the Modern Age
 -----------------------
         After the novel, and subsequently cinema privileged narrative as the key form of cultural expression of the
-modern age, the computer age introduces its correlate- the database.        — Lev Manovich
+        modern age, the computer age introduces its correlate- the database.        — Lev Manovich
 
 Design Goals
 ----------------------
