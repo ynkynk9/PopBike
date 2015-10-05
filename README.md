@@ -20,7 +20,7 @@ Data in the Modern Age
 
 Design Goals
 ----------------------
-        Interactivity
+        <b>Interactivity</b>
           users can show and hide layers with check-boxes
         Give users access underlying data                 
           use tooltips to display numeric data
