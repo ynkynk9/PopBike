@@ -12,3 +12,39 @@ Popbike Goals
     Illustrate the relationship between bike use and demographics     
     Make static data spatial and dynamic   
     Help people know about NYC transit and tourist options through data visualization
+
+Data in the Modern Age
+-----------------------
+        After the novel, and subsequently cinema privileged narrative as the key form of cultural expression of the
+modern age, the computer age introduces its correlate- the database.        — Lev Manovich
+
+Design Goals
+----------------------
+#Interactivity
+        users can show and hide layers with check-boxes
+#Give users access underlying data                 
+        use tooltips to display numeric data
+#Show tourism data
+        use Panoramio image layer
+        
+Data Sets
+---------------------
+Neighborhood data from US Census
+Bike-use data from Citi Bike
+Income data from Zipatlas
+Weather data from World Weather Online
+
+Work Flow
+---------------------
+Get data
+Convert data to standard format
+Manipulate data with JavaScript
+Visualize
+
+Technology
+----------------------
+Webpage: html, css, JavaScript 
+Mapping: Google maps, d3.js 
+Data manipulation: ajax, php 
+Webserver: Apache
+Database: MySQL
