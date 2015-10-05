@@ -29,22 +29,22 @@ Design Goals
         
 Data Sets
 ---------------------
-Neighborhood data from US Census
-Bike-use data from Citi Bike
-Income data from Zipatlas
-Weather data from World Weather Online
+#Neighborhood data from US Census
+#Bike-use data from Citi Bike
+#Income data from Zipatlas
+#Weather data from World Weather Online
 
 Work Flow
 ---------------------
-Get data
-Convert data to standard format
-Manipulate data with JavaScript
-Visualize
+#Get data
+#Convert data to standard format
+#Manipulate data with JavaScript
+#Visualize
 
 Technology
 ----------------------
-Webpage: html, css, JavaScript 
-Mapping: Google maps, d3.js 
-Data manipulation: ajax, php 
-Webserver: Apache
-Database: MySQL
+#Webpage: html, css, JavaScript 
+#Mapping: Google maps, d3.js 
+#Data manipulation: ajax, php 
+#Webserver: Apache
+#Database: MySQL
