@@ -50,9 +50,3 @@ Technology
         Data manipulation: ajax, php 
         Webserver: Apache
         Database: MySQL
-=======
-=======
-# PopBike  
-Pop Bike is My thesis Project which tells the relationship between people and bikes. It is a data visualization project. Pop Bike visualizes Citi bike data by useing Google Maps API and d3.js.Here is the link: http://popbike.info/index.html
->>>>>>> Stashed changes
->>>>>>> Stashed changes
