@@ -20,12 +20,12 @@ Data in the Modern Age
 
 Design Goals
 ----------------------
-###     Interactivity
-        users can show and hide layers with check-boxes
-###     Give users access underlying data                 
-        use tooltips to display numeric data
-#Show tourism data
-        use Panoramio image layer
+        Interactivity
+          users can show and hide layers with check-boxes
+        Give users access underlying data                 
+          use tooltips to display numeric data
+        Show tourism data
+          use Panoramio image layer
         
 Data Sets
 ---------------------
